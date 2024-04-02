@@ -1,0 +1,67 @@
+<html en lang>
+<body>
+
+<style>
+    .banner-video {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+      
+      .banner-video video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .banner-video p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 3rem;
+      }
+</style>
+
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+<div class="banner-video">
+    <video autoplay muted loop>
+      <source src="your-video-source.mp4" type="video/mp4">
+    </video>
+    <p>Your text here</p>
+  </div>
+
+  <input type="text" id="search" placeholder="Search...">
+  <button onclick="search()">Search</button>
+  <p id="output"></p>
+
+  <script>
+    function search() {
+      // Get the value from the input element
+      var searchTerm = document.getElementById('search').value;
+
+      // Perform some processing or logic based on the search term
+      // For example, you can use an if-else statement or a switch statement
+
+      // Simulate a simple example by checking for specific search terms
+      if (searchTerm === 'apple') {
+        document.getElementById('output').innerHTML = 'Search term matched: apple';
+      } else if (searchTerm === 'banana') {
+        document.getElementById('output').innerHTML = 'Search term matched: banana';
+      } else {
+        document.getElementById('output').innerHTML = 'No matching result for the search term: ' + searchTerm;
+      }
+    }
+  </script>
+
+    </body>
+    </html>
